@@ -26,8 +26,8 @@ class Ad
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=55)
-     * @Assert\Length(min=10, max=55, minMessage="Le titre doit faire plus de 10 caractères", maxMessage="Le titre ne doit pas faire plus que 55 caractères")
+     * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=10, max=255, minMessage="Le titre doit faire plus de 10 caractères", maxMessage="Le titre ne doit pas faire plus que 255 caractères")
      */
     private $title;
 
@@ -70,6 +70,12 @@ class Ad
      * @Assert\Valid()
      */
     private $images;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="ads")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $author;
 
     public function __construct()
     {
@@ -207,6 +213,18 @@ class Ad
                 $image->setAd(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getAuthor(): ?User
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?User $author): self
+    {
+        $this->author = $author;
 
         return $this;
     }
