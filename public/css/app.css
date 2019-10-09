@@ -2,6 +2,7 @@
     margin-top: 20px;
 }
 
+
 div.jumbotron {
     padding: 2em;
     background-size: cover;
@@ -12,6 +13,12 @@ div.jumbotron h1,
 div.jumbotron p {
     color: white;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+div.jumbotron .btn {
+    margin-top: 2em;
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 
 div.carousel-caption {
@@ -32,4 +39,26 @@ div.carousel-caption {
 .avatar-mini {
     max-width: 24px;
     max-height: 24px;
+}
+
+.avatar-micro {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.datepicker table tr td.disabled,
+.datepicker table .tr td.disabled:hover {
+    color: #d40c0c !important;
+}
+
+span.rating i {
+    color: goldenrod;
+}
+
+.alert a {
+    text-decoration: none;
+}
+
+.alert .btn {
+    color: #fff;
 }
