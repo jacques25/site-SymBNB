@@ -4,7 +4,7 @@
 
 {% block body %}
  
- <div class="container">
+ <div class="container-fluid">
   <h1 class="my-5">Gestion des commentaires </h1>
       <table class="table table-hover">
       <thead> 
@@ -19,7 +19,7 @@
           </tr>
       </thead>
        <tbody>
-        {% for comment in comments %}
+        {% for comment in pagination.data %}
         <tr>
             <td>{{comment.id}}</td>
             <td>{{comment.createdAt|date('d/m/Y H:i')}}</td>
@@ -48,7 +48,8 @@
        </tbody>
       
       </table>
- 
+
+       {{ pagination.display() }}
  </div>           
 
 {% endblock %}
