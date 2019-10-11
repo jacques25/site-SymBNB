@@ -4,12 +4,12 @@
     <head>
         <meta charset="UTF-8">
         <title>SymBNB - {% block title %}Bienvenue{% endblock %}</title>
-        <meta name="viewport" content="width=device-with, user-scalable=no">
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/a6b8eb0454.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        
+        {% block stylesheets %}
+          {{ encore_entry_link_tags('app') }}
 
-        <link rel="stylesheet" href="/css/app.css">
-        {% block stylesheets %}{% endblock %}
+        {% endblock %}
     </head>
 
     <body>
@@ -19,13 +19,12 @@
 
 
         {% include 'partials/footer.html.twig' %}
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/popper.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/b0b2638830.js" crossorigin="anonymous"></script>
-        </head>
+      
 
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+          {{ encore_entry_script_tags('app') }}
+        {% endblock %}
 
 
     </body>

@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/a6b8eb0454.css">
+       {% block stylesheets %}
+            {{encore_entry_link_tags('app')}}
+        {% endblock %}
+     <link rel="stylesheet" href="https://use.fontawesome.com/a6b8eb0454.css">
     <title>Connexion à l'administration</title>
 
     <style>

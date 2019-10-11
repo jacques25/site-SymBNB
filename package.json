@@ -2,6 +2,8 @@
     "devDependencies": {
         "@symfony/webpack-encore": "^0.28.0",
         "core-js": "^3.0.0",
+        "node-sass": "^4.12.0",
+        "popper.js": "^1.15.0",
         "regenerator-runtime": "^0.13.2",
         "webpack-notifier": "^1.6.0"
     },
@@ -14,6 +16,10 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "eslint": "^6.5.1"
+        "boostrap": "^2.0.0",
+        "bootstrap": "4.3.1",
+        "eslint": "^6.5.1",
+        "jquery": "^3.4.1",
+        "sass-loader": "^7.0.1"
     }
 }
